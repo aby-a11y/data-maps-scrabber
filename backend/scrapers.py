@@ -407,7 +407,7 @@ Server.configure(
     description="Find thousands of new customers personal phone, email and grow your business exponentially.",
     right_header={
         "text": "Love It? Star It! ★",
-        "link": "https://github.com/omkarcloud/google-maps-scraper",
+        "link": "https://github.com/aby-a11y",
     },
 )
 # python -m backend.scrapers
