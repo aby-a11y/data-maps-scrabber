@@ -11,9 +11,11 @@ RUN mkdir app
 WORKDIR /app
 COPY . /app
 
-# Install all deps including TypeScript deps with legacy flag
-RUN cd /app/frontend && npm install --legacy-peer-deps && \
+# Install all deps with legacy flag + missing peer deps
+RUN cd /app/frontend && \
+    npm install --legacy-peer-deps && \
     npm install --save-exact --save-dev @types/node --legacy-peer-deps && \
+    npm install @elastic/datemath moment --legacy-peer-deps && \
     npm run build
 
 RUN python run.py install
