@@ -10,6 +10,9 @@ RUN mkdir app
 WORKDIR /app
 COPY . /app
 
+# Fix: React 17 peer deps conflict
+RUN cd /app/frontend && npm install --legacy-peer-deps && npm run build
+
 RUN python run.py install
 
 EXPOSE ${PORT}
