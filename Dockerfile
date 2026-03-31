@@ -16,7 +16,6 @@ RUN cd /app/frontend && \
     npm install --legacy-peer-deps && \
     npm install --save-exact --save-dev @types/node --legacy-peer-deps && \
     npm install @elastic/datemath moment --legacy-peer-deps && \
-    npm install cogo-toast-react-17-fix --legacy-peer-deps && \
     npm run build
 
 RUN python run.py install
