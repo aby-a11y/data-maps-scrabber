@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { AxiosInstance } from 'axios'
-import cogoToast from 'cogo-toast-react-17-fix'
+import cogoToast from 'cogo-toast'
 import Toast from '../cogo-toast'
 
 import Router from 'next/router'
