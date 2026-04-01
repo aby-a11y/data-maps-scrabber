@@ -1,6 +1,8 @@
+import os
 import backend.scrapers
-from botasaurus_server.app import app
-from bottle import run as bottle_run
+from botasaurus_server.run import run
+
+os.environ["DISABLE_FRONTEND"] = "true"
 
 if __name__ == "__main__":
-    bottle_run(app, host="0.0.0.0", port=8000)
+    run()
