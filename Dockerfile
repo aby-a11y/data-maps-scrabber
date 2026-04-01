@@ -17,7 +17,7 @@ RUN cd /app/frontend && \
     npm install @elastic/datemath moment --legacy-peer-deps && \
     npm run build
 
-RUN python run.py install
+RUN cd /app/frontend && npm install --legacy-peer-deps && python run.py install
 
 EXPOSE ${PORT}
 CMD ["python", "run.py"]
